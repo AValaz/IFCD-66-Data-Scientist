@@ -1,2 +1,3 @@
 h = "Hola"
-print(x)
+print(h)
+print("Qué tal?")
