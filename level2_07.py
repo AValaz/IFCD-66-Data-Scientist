@@ -36,7 +36,8 @@ def calificaciones(dict):
     
     dict_final = {}
     for k, v in dict.items():
-        dict_final[k] = calif(v)
+        dict_final[k.upper()] = calif(v)
+        dict_final
     return dict_final
 
 dict_ejemplo = {"Ale":5, "Mari":6, "Javi":3.5}
