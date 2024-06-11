@@ -44,7 +44,3 @@ def cesta (func, productos):
             total_compra+=aplicar_iva(key, value)
 
     return total_compra
-
-precios_productos = {30:10, 20:10}
-
-print(cesta("IVA", precios_productos))
