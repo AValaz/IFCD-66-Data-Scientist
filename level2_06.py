@@ -23,10 +23,10 @@ def calif(nota):
     return c
 
 def calificaciones (lista):
-    for i in lista:
-        return [calif(i) for i in lista]
+    return [calif(i) for i in lista]
+
 
 lista_ejemplo = [5, 6, 10, 4.5]
 
 print(calificaciones(lista_ejemplo))
-
+## otra opción: list(map(calif, lista_ejemplo))
