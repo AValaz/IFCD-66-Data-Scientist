@@ -2,4 +2,4 @@
 
 lista = list(range(1, 11))
 
-print((lista)[::-1])
+print(lista[::-1])
