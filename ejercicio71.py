@@ -12,7 +12,7 @@ def multp():
 
     with open(f"salidas\\tabla-{numero}.txt", 'w', encoding='utf8') as f:
         for i in range(0, 11):
-            f.write(f"{numero}x{i}= {numero*i}\n")
+            f.write(f"{numero}x{i} = {numero*i}\n")
 
 
 print(multp())
