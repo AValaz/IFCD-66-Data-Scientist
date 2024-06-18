@@ -1,4 +1,6 @@
 """
+Función general que engloba 4 subfunciones que permiten crear un listín telefónico, añadir un teléfono, eliminar un usuario
+y borrar o crear un listín.
 """
 import os 
 
@@ -91,32 +93,28 @@ def borrarArchivo(f):
     if os.path.isfile(f): #archivo existe
         r = input("El archivo existe, ¿Borramos el archivo? (S/N): ")
         if r == "S":
-            os.remove(f)
+            try:
+                os.remove(f)
             #f = open(f, 'w') #Se sobrescribe el archivo y lo deja en blanco
             #f.close()
-            x = "Se ha borrado el archivo"
+                x = "Se ha borrado el archivo"
+            except FileNotFoundError:
+                x = "No existe el fichero o la uri es invalida"
+            except PermissionError:
+                x = "No tienes privilegios para borrar ese fichero"
+            except Exception as error:
+                x = f"Se ha producido un error desconocido. \n Se ha producido el error: {error}"
         else:
             x = "No se ha borrado el archivo"
     else:
         h = input ("El archivo no existe \n. ¿Quieres crear un fichero (S-N): ?").upper()
         if h == 'S':
             with open(f, 'w', encoding = 'utf8') as F:
-                c = F.write()
+                c = F.write('')
             x = "Se ha creado el archivo"
         else:
             x = "No se ha creado el fichero"
     return x
-
-
-print("""
-1: Mirar teléfono
-2: Añadir teléfono
-3: Eliminar teléfono
-4: Crear fichero
-0/5: Terminar
-""")
-
-F = "salidas\\listin.txt"
 
 def menu(f):
     qh = input("Qué quieres hacer?: ")
@@ -136,4 +134,15 @@ def menu(f):
     else:
         y = "Bye"
     return y        
+
+print("""
+1: Mirar teléfono
+2: Añadir teléfono
+3: Eliminar teléfono
+4: Crear fichero
+0/5: Terminar
+""")
+
+F = "salidas\\listin.txt"
+
 print(menu(F))
