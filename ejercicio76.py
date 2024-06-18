@@ -27,7 +27,7 @@ def recuperarTelefono(f, c):
 
     return x
 
-def anadirTelefono(f, c):
+def anadirTelefono(f, nc, tc):
     """
     USO: añade el teléfono del cliente en el fichero
     PARAMETROS:
