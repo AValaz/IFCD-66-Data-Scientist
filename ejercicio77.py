@@ -1,5 +1,7 @@
 ## Ejercicio 77
 
+import functools 
+
 def diccionario(f):
     try:
         with open(f, 'r', encoding='utf8') as file:
@@ -18,6 +20,11 @@ def diccionario(f):
         print("Fichero no encontrado")
 
 
+def stats(dict):
+    for key, value in dict.items():
+        print(key, functools.reduce(lambda x, y: x+y, dict[key])/len([key]))
+
 archivo = "C:\\Users\\Ale\\Documents\\IronHack\\Git\\salidas\\cotizacion.csv"
 
-print(diccionario(archivo))
+diccionario_prueba = diccionario(archivo)
+print(stats(diccionario_prueba))
