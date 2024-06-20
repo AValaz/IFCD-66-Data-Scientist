@@ -36,7 +36,7 @@ import stat
 #         f.write('')
 
 # Renombrar
-# os.rename("C:\\Users\\Ale\\Documents\\IronHack\\Git\\test_os\\example1.txt", "C:\\Users\\Ale\\Documents\\IronHack\\Git\\test_os\\example1.txt")
+# os.rename("C:\\Users\\Ale\\Documents\\IronHack\\Git\\test_os\\example1.txt", "C:\\Users\\Ale\\Documents\\IronHack\\Git\\test_os\\example2.txt")
 
 # Copiar un archivo a otro
 # with open("C:\\Users\\Ale\\Documents\\IronHack\\Git\\test_os\\example1.txt", 'r') as origen:
