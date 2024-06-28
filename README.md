@@ -16,3 +16,5 @@ El listado de ejercicios abarcados en el gitHub es el siguiente: <br/>
 10 - Numpy<br/>
 11 - Matplotlib<br/>
 12 - Pandas<br/>
+
+Se seguirá añadiendo documentación.
