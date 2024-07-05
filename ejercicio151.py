@@ -72,3 +72,5 @@ class Biblioteca:
     
     def __str__(self):
         return f"Biblioteca: {self.__nombre}\nLibros disponibles: {[libro.titulo for libro in self.__libros_disponibles]}\nUsuarios registrados: {[usuario.nombre for usuario in self.__usuarios_registrados]}"
+    
+    
