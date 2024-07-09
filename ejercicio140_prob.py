@@ -29,13 +29,13 @@ from scipy.stats import poisson
 # La incidencia anual por VIH+ en los toxicómanos de la Comunidad Valenciana es de 12
 # por100 toxicomanos. Si se toma una muestra de 30 toxicomanos seronegativos y se sigue
 # a lo largo del año
-
+from scipy.stats import binom
 # a) Cual es la probabilidad de observar al menos 4 casos en un año
-# lambda_ = 3.6
-# pisson_dist = poisson(lambda_)
-# prob_3_o_menos = pisson_dist.cdf(4)
-# prob_4_o_mas = 1 - prob_3_o_menos
-# print(f"Probabilidad de observar al menos 4 casos en un año: {prob_4_o_mas*100:.2f}%")
+p, n = 12/100, 30
+prob_menos_4 = binom.cdf(3,n,p)
+prob_al_menos_4 = 1 - prob_menos_4
+
+print(f"Probabilidad de observar al menos 4 casos en un año: {prob_al_menos_4*100:.2f}%")
 
 # c) Cual seria el número esperado de infecciones: 3.6 infecciones.
 
