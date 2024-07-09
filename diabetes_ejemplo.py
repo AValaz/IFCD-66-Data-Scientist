@@ -28,7 +28,7 @@ df_transform_normal = pd.DataFrame(data = rescaledX_normal, columns = ['preg', '
 scaler_binarizado = Binarizer(threshold=0.0)
 rescaledX_binarizado = scaler_binarizado.fit_transform(X)
 df_transform_binarizado = pd.DataFrame(data = rescaledX_binarizado, columns = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age'])
-print(df_transform_binarizado)
+
 
 features = df[['DiabetesPedigreeFunction', 'Age']]
 scaler_YeoJohnson = PowerTransformer(method='yeo-johnson', standardize=True)
@@ -36,4 +36,15 @@ feature_YeoJohnson = scaler_YeoJohnson.fit(features)
 cal_lambas_yo = feature_YeoJohnson.lambdas_
 feature_YeoJohnson = scaler_YeoJohnson.transform(features)
 df_features_YeoJohnson = pd.DataFrame(data = feature_YeoJohnson, columns=['DiabetesPedigreeFunction', 'Age'])
-print(df_features_YeoJohnson)
+
+## Métricas: saber la calidad del modelo
+# 1. Clasificación
+# Accuracy: clasificación. Nº de predicciones correctas entre el total de predicciones.
+# Kappa: precisión de la clasificación.
+# AUC: capacidad de un modelo para discriminar clases positivas y negativas. Sensibilidad (verdaderos positivos) vs especificidad ()
+# Matrices de confusión
+
+# 2. Regresión
+#  Error absoluto Medio (MAE): diferencia entre el valor predicho y el real.
+#  Error Cuadrático medio (MSE): positivizar el error
+#  R2: cuanto más cercano a 0, mejor es la predicción.
