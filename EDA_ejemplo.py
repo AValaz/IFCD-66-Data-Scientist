@@ -108,7 +108,7 @@ df = pd.read_csv("C:\\Users\\Ale\\Documents\\IronHack\\Git\\salidas\\titanic.csv
 ## Test de proporciones
 # tasa_superviviencia = df.groupby('AgeCluster')['Survived'].mean()
 # n1 = len(df[df['AgeCluster']==0])
-# n2 = df[df['AgeCluster']==0].shape[0]
+# n2 = df[df['AgeCluster']==1].shape[0]
 # s1 = df[df['AgeCluster']==0]['Survived'].sum()
 # s2 = df[df['AgeCluster']==1]['Survived'].sum()
 
@@ -127,4 +127,4 @@ df = pd.read_csv("C:\\Users\\Ale\\Documents\\IronHack\\Git\\salidas\\titanic.csv
 # plt.show()
 
 # Tablas de contigencia
-print(pd.crosstab(df['Sex'], df['Survived'], margins=True, normalize='index').round(4)*100)
+# print(pd.crosstab(df['Sex'], df['Survived'], margins=True, normalize='index').round(4)*100)
